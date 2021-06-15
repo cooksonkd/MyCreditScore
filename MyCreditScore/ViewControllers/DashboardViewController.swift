@@ -13,6 +13,7 @@ class DashboardViewController: UIViewController {
     
     var circularProgressBarView: CircularProgressBarView!
     var circularViewDuration: TimeInterval = 2
+    var creditScorePercentage: CGFloat = 0.33333333 // To get from api credit score
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,14 +21,9 @@ class DashboardViewController: UIViewController {
     }
     
     func setUpCircularProgressBarView() {
-        // set view
-        let frame = CGRect(x: 0, y: 0, width: 250, height: 250)
-        circularProgressBarView = CircularProgressBarView(frame: frame)
-        // align to the center of the screen
+        circularProgressBarView = CircularProgressBarView(frame: .zero, creditScorePercentage: creditScorePercentage)
         circularProgressBarView.center = view.center
-        // add this view to the view controller
         view.addSubview(circularProgressBarView)
-        // call the animation with circularViewDuration
         circularProgressBarView.progressAnimation(duration: circularViewDuration)
     }
 

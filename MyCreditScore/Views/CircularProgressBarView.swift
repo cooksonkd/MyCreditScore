@@ -16,41 +16,49 @@ class CircularProgressBarView: UIView {
     private var endPoint = CGFloat(3 * Double.pi / 2)
     
     // MARK: - Initializers -
-    public override init(frame: CGRect) {
+    public init(frame: CGRect, creditScorePercentage: CGFloat) {
         super.init(frame: frame)
-        self.createCircularPath()
+        self.createCircularPath(creditScorePercentage: creditScorePercentage)
     }
     
-    public required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        self.createCircularPath()
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     //  MARK: - Methods -
-    func createCircularPath() {
-        let circularPath = UIBezierPath(
+    func createCircularPath(creditScorePercentage: CGFloat) {
+        let circleLayerCircularPath = UIBezierPath(
             arcCenter: CGPoint(x: frame.size.width/2.0, y: frame.size.height/2.0),
-            radius: 150,
+            radius: 136,
             startAngle: startPoint,
             endAngle: endPoint,
             clockwise: true)
         
         self.circleLayer = self.circlePath (
-            path: circularPath.cgPath,
+            path: circleLayerCircularPath.cgPath,
             fillColor: UIColor.clear.cgColor,
             lineCap: .round,
-            lineWidth: 20.0,
+            lineWidth: 10.0,
             strokeEnd: 1.0,
             strokeColor: UIColor.lightGray.cgColor
         )
         
         layer.addSublayer(circleLayer)
         
+        let progressLayerEndAngle = (CGFloat(2*Double.pi)*creditScorePercentage)-CGFloat(Double.pi/2)
+        
+        let progressLayerCircularPath = UIBezierPath(
+            arcCenter: CGPoint(x: frame.size.width/2.0, y: frame.size.height/2.0),
+            radius: 125,
+            startAngle: startPoint,
+            endAngle: progressLayerEndAngle,
+            clockwise: true)
+        
         self.progressLayer = self.circlePath (
-            path: circularPath.cgPath,
+            path: progressLayerCircularPath.cgPath,
             fillColor: UIColor.clear.cgColor,
             lineCap: .round,
-            lineWidth: 18.5,
+            lineWidth: 10.0,
             strokeEnd: 0,
             strokeColor: UIColor.green.cgColor
         )

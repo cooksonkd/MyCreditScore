@@ -29,7 +29,7 @@ class CircularProgressBarView: UIView {
     func createCircularPath(creditScorePercentage: CGFloat) {
         let circleLayerCircularPath = UIBezierPath(
             arcCenter: CGPoint(x: frame.size.width/2.0, y: frame.size.height/2.0),
-            radius: 136,
+            radius: 140,
             startAngle: startAngle,
             endAngle: endAngle,
             clockwise: true)
@@ -38,7 +38,7 @@ class CircularProgressBarView: UIView {
             path: circleLayerCircularPath.cgPath,
             fillColor: UIColor.clear.cgColor,
             lineCap: .round,
-            lineWidth: 10.0,
+            lineWidth: 7.5,
             strokeEnd: 1.0,
             strokeColor: UIColor.lightGray.cgColor
         )
@@ -49,7 +49,7 @@ class CircularProgressBarView: UIView {
         
         let progressLayerCircularPath = UIBezierPath(
             arcCenter: CGPoint(x: frame.size.width/2.0, y: frame.size.height/2.0),
-            radius: 125,
+            radius: 132.0,
             startAngle: startAngle,
             endAngle: progressLayerEndAngle,
             clockwise: true)
@@ -58,9 +58,9 @@ class CircularProgressBarView: UIView {
             path: progressLayerCircularPath.cgPath,
             fillColor: UIColor.clear.cgColor,
             lineCap: .round,
-            lineWidth: 10.0,
+            lineWidth: 7.5,
             strokeEnd: 0,
-            strokeColor: UIColor.green.cgColor
+            strokeColor: UIColor.cyan.cgColor
         )
         
         layer.addSublayer(progressLayer)

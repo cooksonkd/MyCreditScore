@@ -12,8 +12,8 @@ class CircularProgressBarView: UIView {
     // MARK: - Properties -
     private var circleLayer = CAShapeLayer()
     private var progressLayer = CAShapeLayer()
-    private var startPoint = CGFloat(-Double.pi / 2)
-    private var endPoint = CGFloat(3 * Double.pi / 2)
+    private var startAngle = CGFloat(-Double.pi / 2)
+    private var endAngle = CGFloat(3 * Double.pi / 2)
     
     // MARK: - Initializers -
     public init(frame: CGRect, creditScorePercentage: CGFloat) {
@@ -30,8 +30,8 @@ class CircularProgressBarView: UIView {
         let circleLayerCircularPath = UIBezierPath(
             arcCenter: CGPoint(x: frame.size.width/2.0, y: frame.size.height/2.0),
             radius: 136,
-            startAngle: startPoint,
-            endAngle: endPoint,
+            startAngle: startAngle,
+            endAngle: endAngle,
             clockwise: true)
         
         self.circleLayer = self.circlePath (
@@ -50,7 +50,7 @@ class CircularProgressBarView: UIView {
         let progressLayerCircularPath = UIBezierPath(
             arcCenter: CGPoint(x: frame.size.width/2.0, y: frame.size.height/2.0),
             radius: 125,
-            startAngle: startPoint,
+            startAngle: startAngle,
             endAngle: progressLayerEndAngle,
             clockwise: true)
         

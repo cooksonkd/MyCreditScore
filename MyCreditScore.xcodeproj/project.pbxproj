@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CE2F617F2677AD6400FEF283 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F617D2677AD6400FEF283 /* DashboardViewController.swift */; };
+		CE2F6182267A00DE00FEF283 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F6181267A00DE00FEF283 /* NetworkRequest.swift */; };
+		CE2F6184267A126500FEF283 /* CreditReportInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F6183267A126500FEF283 /* CreditReportInfo.swift */; };
 		CE984CDE26776507003F585B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE984CDD26776507003F585B /* AppDelegate.swift */; };
 		CE984CE026776507003F585B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE984CDF26776507003F585B /* SceneDelegate.swift */; };
 		CE984CE226776507003F585B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE984CE126776507003F585B /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		CE2F617D2677AD6400FEF283 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		CE2F6181267A00DE00FEF283 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		CE2F6183267A126500FEF283 /* CreditReportInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditReportInfo.swift; sourceTree = "<group>"; };
 		CE984CDA26776507003F585B /* MyCreditScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCreditScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE984CDD26776507003F585B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE984CDF26776507003F585B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 				CE984CE62677650F003F585B /* Assets.xcassets */,
 				CE984CE82677650F003F585B /* LaunchScreen.storyboard */,
 				CE984CEB2677650F003F585B /* Info.plist */,
+				CE2F6181267A00DE00FEF283 /* NetworkRequest.swift */,
+				CE2F6183267A126500FEF283 /* CreditReportInfo.swift */,
 			);
 			path = MyCreditScore;
 			sourceTree = "<group>";
@@ -159,10 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2F6184267A126500FEF283 /* CreditReportInfo.swift in Sources */,
 				CE984CE226776507003F585B /* ViewController.swift in Sources */,
 				CE984CDE26776507003F585B /* AppDelegate.swift in Sources */,
 				CE2F617F2677AD6400FEF283 /* DashboardViewController.swift in Sources */,
 				CE984CF22677767D003F585B /* CircularProgressBarView.swift in Sources */,
+				CE2F6182267A00DE00FEF283 /* NetworkRequest.swift in Sources */,
 				CE984CE026776507003F585B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

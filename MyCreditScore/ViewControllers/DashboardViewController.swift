@@ -13,14 +13,13 @@ class DashboardViewController: UIViewController {
     
     // MARK: - Text animation properties -
     var startValue: Double = 0
-    let endValue: Double = 514
-    let maxCreditScore: Double = 700
+    let endValue: Double = 64
+    let maxCreditScore: Double = 100
     let animationDuration: Double = 2
     let animationStartDate = Date()
     
     // MARK: - Progress bar properties -
     var circularProgressBarView: CircularProgressBarView!
-    var circularViewDuration: TimeInterval = 2
     var creditScorePercentage = CGFloat() // To get from api credit score
     
     override func viewDidLoad() {
@@ -37,7 +36,7 @@ class DashboardViewController: UIViewController {
         circularProgressBarView = CircularProgressBarView(frame: .zero, creditScorePercentage: creditScorePercentage)
         circularProgressBarView.center = view.center
         view.addSubview(circularProgressBarView)
-        circularProgressBarView.progressAnimation(duration: circularViewDuration)
+        circularProgressBarView.progressAnimation(duration: animationDuration)
     }
     
     @objc func handleTextUpdate(){
@@ -52,15 +51,4 @@ class DashboardViewController: UIViewController {
             self.incrementingCreditScoreLabel.text = "\(incrementingCreditScoreLabelValue)"
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

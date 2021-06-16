@@ -28,7 +28,7 @@ struct CreditReportInfo: Codable {
         var creditScorePercentage: CGFloat = -1.0
         if let score = self.score,
            let maxScoreValue = self.maxScoreValue {
-            creditScorePercentage = CGFloat(score / maxScoreValue)
+            creditScorePercentage = CGFloat(score)/CGFloat(maxScoreValue)
         }
         return creditScorePercentage
     }

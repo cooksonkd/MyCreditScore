@@ -11,12 +11,20 @@ class DashboardViewController: UIViewController {
 
     @IBOutlet weak var incrementingCreditScoreLabel: UILabel!
     
+    // MARK: - Text animation properties -
+    var startValue: Double = 0
+    let endValue: Double = 514
+    let maxCreditScore: Double = 700
+    let animationDuration: Double = 2
+    let animationStartDate = Date()
+    
     // MARK: - Progress bar properties -
     var circularProgressBarView: CircularProgressBarView!
     var circularViewDuration: TimeInterval = 2
-    var creditScorePercentage: CGFloat = 1.0 // To get from api credit score
+    var creditScorePercentage = CGFloat() // To get from api credit score
     
     override func viewDidLoad() {
+        self.creditScorePercentage = CGFloat(endValue)/CGFloat(maxCreditScore)
         super.viewDidLoad()
         setUpCircularProgressBarView()
         
@@ -31,12 +39,6 @@ class DashboardViewController: UIViewController {
         view.addSubview(circularProgressBarView)
         circularProgressBarView.progressAnimation(duration: circularViewDuration)
     }
-    
-    // MARK: - Text animation properties -
-    var startValue: Double = 0
-    let endValue: Double = 705
-    let animationDuration: Double = 2
-    let animationStartDate = Date()
     
     @objc func handleTextUpdate(){
         let now = Date()

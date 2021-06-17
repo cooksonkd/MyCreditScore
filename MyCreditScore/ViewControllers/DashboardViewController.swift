@@ -60,6 +60,8 @@ class DashboardViewController: UIViewController, DataManagerDelegate {
         }
     }
     
+    
+    // MARK: Delegate Method
     func updateViewController(creditReportInfo: CreditReportInfo?) {
         self.animationStartDate = Date ()
         if let endValue = creditReportInfo?.score,

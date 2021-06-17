@@ -66,6 +66,24 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		CE2F6190267B9D7300FEF283 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE2F6181267A00DE00FEF283 /* NetworkRequest.swift */,
+				CE2F618E267B58AE00FEF283 /* DataManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CE2F6193267B9DAA00FEF283 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE2F6185267A243700FEF283 /* ApiResponse.swift */,
+				CE2F6183267A126500FEF283 /* CreditReportInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CE984CD126776507003F585B = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +103,8 @@
 		CE984CDC26776507003F585B /* MyCreditScore */ = {
 			isa = PBXGroup;
 			children = (
+				CE2F6193267B9DAA00FEF283 /* Models */,
+				CE2F6190267B9D7300FEF283 /* Services */,
 				CE2F617C2677A0B100FEF283 /* ViewControllers */,
 				CE2F617B2677A09100FEF283 /* Views */,
 				CE984CDD26776507003F585B /* AppDelegate.swift */,
@@ -93,10 +113,6 @@
 				CE984CE62677650F003F585B /* Assets.xcassets */,
 				CE984CE82677650F003F585B /* LaunchScreen.storyboard */,
 				CE984CEB2677650F003F585B /* Info.plist */,
-				CE2F6181267A00DE00FEF283 /* NetworkRequest.swift */,
-				CE2F6183267A126500FEF283 /* CreditReportInfo.swift */,
-				CE2F6185267A243700FEF283 /* ApiResponse.swift */,
-				CE2F618E267B58AE00FEF283 /* DataManager.swift */,
 			);
 			path = MyCreditScore;
 			sourceTree = "<group>";

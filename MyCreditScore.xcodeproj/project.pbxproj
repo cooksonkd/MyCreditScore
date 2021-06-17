@@ -11,6 +11,7 @@
 		CE2F6182267A00DE00FEF283 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F6181267A00DE00FEF283 /* NetworkRequest.swift */; };
 		CE2F6184267A126500FEF283 /* CreditReportInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F6183267A126500FEF283 /* CreditReportInfo.swift */; };
 		CE2F6186267A243700FEF283 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F6185267A243700FEF283 /* ApiResponse.swift */; };
+		CE2F618F267B58AE00FEF283 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F618E267B58AE00FEF283 /* DataManager.swift */; };
 		CE984CDE26776507003F585B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE984CDD26776507003F585B /* AppDelegate.swift */; };
 		CE984CE026776507003F585B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE984CDF26776507003F585B /* SceneDelegate.swift */; };
 		CE984CE226776507003F585B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE984CE126776507003F585B /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 		CE2F6181267A00DE00FEF283 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		CE2F6183267A126500FEF283 /* CreditReportInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditReportInfo.swift; sourceTree = "<group>"; };
 		CE2F6185267A243700FEF283 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
+		CE2F618E267B58AE00FEF283 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		CE984CDA26776507003F585B /* MyCreditScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCreditScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE984CDD26776507003F585B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE984CDF26776507003F585B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				CE2F6181267A00DE00FEF283 /* NetworkRequest.swift */,
 				CE2F6183267A126500FEF283 /* CreditReportInfo.swift */,
 				CE2F6185267A243700FEF283 /* ApiResponse.swift */,
+				CE2F618E267B58AE00FEF283 /* DataManager.swift */,
 			);
 			path = MyCreditScore;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				CE984CF22677767D003F585B /* CircularProgressBarView.swift in Sources */,
 				CE2F6186267A243700FEF283 /* ApiResponse.swift in Sources */,
 				CE2F6182267A00DE00FEF283 /* NetworkRequest.swift in Sources */,
+				CE2F618F267B58AE00FEF283 /* DataManager.swift in Sources */,
 				CE984CE026776507003F585B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

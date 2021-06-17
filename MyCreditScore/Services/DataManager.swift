@@ -11,6 +11,7 @@ protocol DataManagerDelegate: UIViewController {
     func updateViewController(creditReportInfo: CreditReportInfo?)
 }
 
+/// A singleton class responsible for managing the data return from the api.
 class DataManager {
     static let shared = DataManager()
     private let urlString = "https://5lfoiyb0b3.execute-api.us-west-2.amazonaws.com/prod/mockcredit/values"
@@ -28,6 +29,9 @@ class DataManager {
         }
     }
     
+    /// This method sends a request off to the api.
+    /// - Parameter requestCompletion: A function that has a parameter of type CreditReportInfo?
+    /// - Returns: Void
     private func fetchCreditReportFromApi(requestCompletion: @escaping (CreditReportInfo?)->()) {
         if let url = URL(string: urlString) {
             NetworkRequest.fetchRequest(url: url) { [weak self] data, error in
@@ -40,6 +44,11 @@ class DataManager {
         }
     }
     
+    /// Takes in data in the form of JSON and parses it.
+    /// - Parameters:
+    ///   - data: Data received from the api.
+    ///   - error: Error received from the api.
+    /// - Returns: An object of type CreditReportInfo?
     private func decodeJSONFromAPI(data: Data?, error: Error?) -> CreditReportInfo? {
         if let data = data {
             if let apiResponse = try? JSONDecoder().decode(ApiResponse.self, from: data) {

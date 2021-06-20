@@ -73,7 +73,11 @@ class DashboardViewController: UIViewController, DataManagerDelegate {
     }
     
     @objc func handleTap() {
-        print("Did tap on circle!")
+        let creditReportViewController = CreditReportViewController()
+        creditReportViewController.title = "Credit Report"
+        creditReportViewController.setCreditReportInfo(creditReportInfo: self.creditReportInfo)
+        let navigationController = UINavigationController(rootViewController: creditReportViewController)
+        present(navigationController, animated: true, completion: nil)
     }
     
     // MARK: Delegate Method

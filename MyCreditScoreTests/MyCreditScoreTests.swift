@@ -19,15 +19,12 @@ class MyCreditScoreTests: XCTestCase {
             minScoreValue: nil,
             percentageCreditUsed: nil,
             currentShortTermDebt: nil,
-            currentShortTermNonPromotionalDebt: nil,
-            currentShortTermCreditLimit: nil,
-            currentShortTermCreditUtilisation: nil,
             changeInShortTermDebt: nil,
             currentLongTermDebt: nil,
-            currentLongTermCreditLimit: nil,
             changeInLongTermDebt: nil,
             daysUntilNextReport: nil,
-            equifaxScoreBandDescription: nil)
+            equifaxScoreBandDescription: nil
+        )
         
         try super.setUpWithError()
     }

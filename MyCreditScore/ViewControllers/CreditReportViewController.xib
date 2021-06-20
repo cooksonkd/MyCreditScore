@@ -1,22 +1,187 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreditReportViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreditReportViewController" customModule="MyCreditScore" customModuleProvider="target">
             <connections>
+                <outlet property="changeInLongTermDebtLabel" destination="H4M-1H-Iqe" id="1Js-iv-Mpb"/>
+                <outlet property="changeInShortTermDebtLabel" destination="MYB-JN-Z2q" id="KbJ-sM-0QQ"/>
+                <outlet property="creditScoreLabel" destination="FbV-0h-VhG" id="dKs-EU-rlb"/>
+                <outlet property="currentLongTermDebtLabel" destination="BXo-IV-Zbb" id="rnf-PZ-7ss"/>
+                <outlet property="currentShortTermDebtLabel" destination="Db9-FQ-rVl" id="TUw-9a-d5N"/>
+                <outlet property="daysUntilNextReportLabel" destination="moI-PD-TNy" id="65M-RQ-83C"/>
+                <outlet property="equifaxScoreBandDescriptionLabel" destination="dDK-fk-jYB" id="EyT-EQ-ARH"/>
+                <outlet property="maximumScoreValueLabel" destination="VvM-qB-rNF" id="tYJ-z3-NNK"/>
+                <outlet property="percentageCreditUsedLabel" destination="78y-Ae-pQh" id="Fbt-DE-OoT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="700" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FbV-0h-VhG" userLabel="creditScoreLabel">
+                    <rect key="frame" x="105" y="32" width="110" height="69.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Maximum score value:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ta-gw-0uO" userLabel="maximumScoreValueText">
+                    <rect key="frame" x="16" y="133.5" width="169.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Percentage credit used:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mI2-Rn-UVu" userLabel="percentageCreditUsedText">
+                    <rect key="frame" x="16" y="162" width="181.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current short-term debt:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRe-a1-drS" userLabel="currentShortTermDebtText">
+                    <rect key="frame" x="16" y="191" width="188.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change in short-term debt:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1p-oL-jC3" userLabel="changeInShortTermDebtText">
+                    <rect key="frame" x="16" y="220" width="208" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current long-term debt:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlx-fu-AWw" userLabel="currentLongTermDebtText">
+                    <rect key="frame" x="16" y="249" width="182" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change in long-term debt:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exP-Kd-Idy" userLabel="changeInLongTermDebtText">
+                    <rect key="frame" x="16" y="278" width="201" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days until next report:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xt0-pT-Vnk" userLabel="daysUntilNextReportText">
+                    <rect key="frame" x="16" y="307" width="168" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Equifax score band description:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHy-7J-iBS" userLabel="equifaxScoreBandDescriptionText">
+                    <rect key="frame" x="16" y="336" width="150" height="41"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvM-qB-rNF" userLabel="maximumScoreValueLabelText">
+                    <rect key="frame" x="262.5" y="133.5" width="41.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78y-Ae-pQh" userLabel="percentageCreditUsedLabel">
+                    <rect key="frame" x="262" y="162" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Db9-FQ-rVl" userLabel="currentShortTermDebtLabel">
+                    <rect key="frame" x="262" y="191" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYB-JN-Z2q" userLabel="changeInShortTermDebtLabel">
+                    <rect key="frame" x="262" y="220" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXo-IV-Zbb" userLabel="currentLongTermDebtLabel">
+                    <rect key="frame" x="262" y="249" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4M-1H-Iqe" userLabel="changeInLongTermDebtLabel">
+                    <rect key="frame" x="262" y="278" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moI-PD-TNy" userLabel="daysUntilNextReportLabel">
+                    <rect key="frame" x="262" y="307" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDK-fk-jYB" userLabel="equifaxScoreBandDescriptionLabel">
+                    <rect key="frame" x="262" y="336" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VvM-qB-rNF" secondAttribute="trailing" constant="16" id="0Bi-q7-MCb"/>
+                <constraint firstItem="dDK-fk-jYB" firstAttribute="trailing" secondItem="moI-PD-TNy" secondAttribute="trailing" id="0tC-bD-4Ga"/>
+                <constraint firstItem="v1p-oL-jC3" firstAttribute="leading" secondItem="cRe-a1-drS" secondAttribute="leading" id="1AU-cl-uSB"/>
+                <constraint firstItem="vlx-fu-AWw" firstAttribute="leading" secondItem="v1p-oL-jC3" secondAttribute="leading" id="4zJ-fv-IjS"/>
+                <constraint firstItem="H4M-1H-Iqe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="exP-Kd-Idy" secondAttribute="trailing" constant="8" id="5F2-We-Qwm"/>
+                <constraint firstItem="VvM-qB-rNF" firstAttribute="top" secondItem="6Ta-gw-0uO" secondAttribute="top" id="5K8-XI-L7m"/>
+                <constraint firstItem="Xt0-pT-Vnk" firstAttribute="top" secondItem="exP-Kd-Idy" secondAttribute="bottom" constant="8" id="5SY-yW-RHG"/>
+                <constraint firstItem="BXo-IV-Zbb" firstAttribute="trailing" secondItem="MYB-JN-Z2q" secondAttribute="trailing" id="9el-FJ-cQI"/>
+                <constraint firstItem="H4M-1H-Iqe" firstAttribute="trailing" secondItem="BXo-IV-Zbb" secondAttribute="trailing" id="AcB-hl-f51"/>
+                <constraint firstItem="mI2-Rn-UVu" firstAttribute="top" secondItem="6Ta-gw-0uO" secondAttribute="bottom" constant="8" id="DIH-aM-C3r"/>
+                <constraint firstItem="moI-PD-TNy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Xt0-pT-Vnk" secondAttribute="trailing" constant="8" id="FMc-mu-N6f"/>
+                <constraint firstItem="MYB-JN-Z2q" firstAttribute="trailing" secondItem="Db9-FQ-rVl" secondAttribute="trailing" id="GCR-t4-Dbw"/>
+                <constraint firstItem="Db9-FQ-rVl" firstAttribute="top" secondItem="cRe-a1-drS" secondAttribute="top" id="KV2-90-IQ7"/>
+                <constraint firstItem="rHy-7J-iBS" firstAttribute="leading" secondItem="Xt0-pT-Vnk" secondAttribute="leading" id="Kp2-it-MVR"/>
+                <constraint firstItem="BXo-IV-Zbb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vlx-fu-AWw" secondAttribute="trailing" constant="8" id="Ll1-1y-g8V"/>
+                <constraint firstItem="v1p-oL-jC3" firstAttribute="top" secondItem="cRe-a1-drS" secondAttribute="bottom" constant="8" id="N2V-Di-gKQ"/>
+                <constraint firstItem="6Ta-gw-0uO" firstAttribute="top" secondItem="FbV-0h-VhG" secondAttribute="bottom" constant="32" id="PAa-vq-b6u"/>
+                <constraint firstItem="BXo-IV-Zbb" firstAttribute="top" secondItem="vlx-fu-AWw" secondAttribute="top" id="Rut-Sg-kTW"/>
+                <constraint firstItem="VvM-qB-rNF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Ta-gw-0uO" secondAttribute="trailing" constant="8" id="Sbx-3d-HlO"/>
+                <constraint firstItem="Xt0-pT-Vnk" firstAttribute="leading" secondItem="exP-Kd-Idy" secondAttribute="leading" id="TI3-Rx-ZmZ"/>
+                <constraint firstItem="rHy-7J-iBS" firstAttribute="top" secondItem="Xt0-pT-Vnk" secondAttribute="bottom" constant="8" id="Tuq-AL-5du"/>
+                <constraint firstItem="Db9-FQ-rVl" firstAttribute="trailing" secondItem="78y-Ae-pQh" secondAttribute="trailing" id="WmP-eV-iqF"/>
+                <constraint firstItem="cRe-a1-drS" firstAttribute="leading" secondItem="mI2-Rn-UVu" secondAttribute="leading" id="WtZ-8C-95a"/>
+                <constraint firstItem="FbV-0h-VhG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XKS-0w-7Tk"/>
+                <constraint firstItem="cRe-a1-drS" firstAttribute="top" secondItem="mI2-Rn-UVu" secondAttribute="bottom" constant="8" id="Xig-jw-SJ7"/>
+                <constraint firstItem="Db9-FQ-rVl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cRe-a1-drS" secondAttribute="trailing" constant="8" id="ZpU-0E-7RY"/>
+                <constraint firstItem="moI-PD-TNy" firstAttribute="top" secondItem="Xt0-pT-Vnk" secondAttribute="top" id="a5q-0D-xGi"/>
+                <constraint firstItem="FbV-0h-VhG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="32" id="dFo-Tj-D53"/>
+                <constraint firstItem="vlx-fu-AWw" firstAttribute="top" secondItem="v1p-oL-jC3" secondAttribute="bottom" constant="8" id="e1Q-l2-g1K"/>
+                <constraint firstItem="MYB-JN-Z2q" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="v1p-oL-jC3" secondAttribute="trailing" constant="8" id="eVG-ys-6hc"/>
+                <constraint firstItem="mI2-Rn-UVu" firstAttribute="leading" secondItem="6Ta-gw-0uO" secondAttribute="leading" id="g6q-Wy-MdF"/>
+                <constraint firstItem="78y-Ae-pQh" firstAttribute="trailing" secondItem="VvM-qB-rNF" secondAttribute="trailing" id="hY2-0S-Gb9"/>
+                <constraint firstItem="MYB-JN-Z2q" firstAttribute="top" secondItem="v1p-oL-jC3" secondAttribute="top" id="hdd-Rv-Rsh"/>
+                <constraint firstItem="exP-Kd-Idy" firstAttribute="leading" secondItem="vlx-fu-AWw" secondAttribute="leading" id="hwj-h7-EkW"/>
+                <constraint firstItem="6Ta-gw-0uO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="lSd-xt-S3o"/>
+                <constraint firstItem="dDK-fk-jYB" firstAttribute="top" secondItem="rHy-7J-iBS" secondAttribute="top" id="mX3-av-0jg"/>
+                <constraint firstItem="H4M-1H-Iqe" firstAttribute="top" secondItem="exP-Kd-Idy" secondAttribute="top" id="nC9-fc-2J2"/>
+                <constraint firstItem="dDK-fk-jYB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rHy-7J-iBS" secondAttribute="trailing" constant="8" id="nUm-KY-MJ3"/>
+                <constraint firstItem="78y-Ae-pQh" firstAttribute="top" secondItem="mI2-Rn-UVu" secondAttribute="top" id="nlv-vy-Fyn"/>
+                <constraint firstItem="exP-Kd-Idy" firstAttribute="top" secondItem="vlx-fu-AWw" secondAttribute="bottom" constant="8" id="tx0-jf-Ocj"/>
+                <constraint firstItem="moI-PD-TNy" firstAttribute="trailing" secondItem="H4M-1H-Iqe" secondAttribute="trailing" id="vYy-AB-ocE"/>
+                <constraint firstItem="78y-Ae-pQh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mI2-Rn-UVu" secondAttribute="trailing" constant="8" id="xHO-nu-oft"/>
+            </constraints>
+            <point key="canvasLocation" x="26" y="87"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

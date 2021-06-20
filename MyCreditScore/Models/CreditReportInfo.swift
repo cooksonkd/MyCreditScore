@@ -13,12 +13,8 @@ struct CreditReportInfo: Codable {
         minScoreValue,
         percentageCreditUsed,
         currentShortTermDebt,
-        currentShortTermNonPromotionalDebt,
-        currentShortTermCreditLimit,
-        currentShortTermCreditUtilisation,
         changeInShortTermDebt,
         currentLongTermDebt,
-        currentLongTermCreditLimit,
         changeInLongTermDebt,
         daysUntilNextReport: Int?
     let equifaxScoreBandDescription: String?

@@ -24,8 +24,7 @@ struct CreditReportInfo: Codable {
     let equifaxScoreBandDescription: String?
     
     func creditScorePercentage() -> CGFloat {
-        // creditScorePercentage set to return -1.0 if one or more of the values are null.
-        var creditScorePercentage: CGFloat = -1.0
+        var creditScorePercentage: CGFloat = 0
         if let score = self.score,
            let maxScoreValue = self.maxScoreValue {
             creditScorePercentage = CGFloat(score)/CGFloat(maxScoreValue)

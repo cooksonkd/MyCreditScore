@@ -11,7 +11,6 @@
         <!--Item 1-->
         <scene sceneID="tlk-xq-nFc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="G0v-I2-7fj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="cdn-JR-Rvc" customClass="DashboardViewController" customModule="MyCreditScore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="leX-PF-fjO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -23,19 +22,47 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your credit score is" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1T-GJ-1dt">
+                                <rect key="frame" x="134" y="392.5" width="146" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="out of 700" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Skk-o0-cQO">
+                                <rect key="frame" x="168" y="483" width="78.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CUS-Di-jWY">
+                                <rect key="frame" x="67" y="308" width="280" height="280"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="HgF-x7-XXD"/>
+                                    <constraint firstAttribute="height" constant="280" id="Rba-xN-n4h"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="p6n-X7-HfG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="LBI-g4-SxX" firstAttribute="centerX" secondItem="leX-PF-fjO" secondAttribute="centerX" id="6hk-MW-UFO"/>
                             <constraint firstItem="LBI-g4-SxX" firstAttribute="centerY" secondItem="leX-PF-fjO" secondAttribute="centerY" id="6jO-Oy-GhO"/>
+                            <constraint firstItem="LBI-g4-SxX" firstAttribute="top" secondItem="t1T-GJ-1dt" secondAttribute="bottom" id="DgU-E2-dsi"/>
+                            <constraint firstItem="Skk-o0-cQO" firstAttribute="top" secondItem="LBI-g4-SxX" secondAttribute="bottom" id="Oq0-PN-Bhw"/>
+                            <constraint firstItem="t1T-GJ-1dt" firstAttribute="centerX" secondItem="leX-PF-fjO" secondAttribute="centerX" id="Oyf-dH-Pkd"/>
+                            <constraint firstItem="CUS-Di-jWY" firstAttribute="centerX" secondItem="leX-PF-fjO" secondAttribute="centerX" id="TRv-qK-1sg"/>
+                            <constraint firstItem="CUS-Di-jWY" firstAttribute="centerY" secondItem="leX-PF-fjO" secondAttribute="centerY" id="uuV-7b-tur"/>
+                            <constraint firstItem="Skk-o0-cQO" firstAttribute="centerX" secondItem="leX-PF-fjO" secondAttribute="centerX" id="y2z-fL-9xf"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="IpL-V0-68b"/>
                     <connections>
                         <outlet property="incrementingCreditScoreLabel" destination="LBI-g4-SxX" id="Qau-hl-1u0"/>
+                        <outlet property="tapGestureUIView" destination="CUS-Di-jWY" id="2HO-uc-L04"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G0v-I2-7fj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-503" y="-342"/>
         </scene>

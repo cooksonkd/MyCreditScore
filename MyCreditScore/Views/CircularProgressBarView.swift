@@ -18,7 +18,7 @@ class CircularProgressBarView: UIView {
     // MARK: - Initializers -
     public init(frame: CGRect, creditScorePercentage: CGFloat) {
         super.init(frame: frame)
-        self.createCircularPath(creditScorePercentage: creditScorePercentage)
+        self.createOuterCircleCircularPath()
     }
     
     required init?(coder: NSCoder) {
@@ -29,7 +29,7 @@ class CircularProgressBarView: UIView {
     
     /// A path that consists of straight and curved line segments that you can render in your custom views. This method is specifically for circular paths.
     /// - Parameter creditScorePercentage: A CGFloat value determined by - (User credit score / maximum credit score).
-    func createCircularPath(creditScorePercentage: CGFloat) {
+    func createOuterCircleCircularPath() {
         let circleLayerCircularPath = UIBezierPath(
             arcCenter: CGPoint(x: frame.size.width/2.0, y: frame.size.height/2.0),
             radius: 140,
@@ -47,16 +47,18 @@ class CircularProgressBarView: UIView {
         )
         
         layer.addSublayer(circleLayer)
-        
+    }
+    
+    func createProgressBarCircularPath(creditScorePercentage: CGFloat) {
         let progressLayerEndAngle = (CGFloat(2*Double.pi)*creditScorePercentage)-CGFloat(Double.pi/2)
-        
+
         let progressLayerCircularPath = UIBezierPath(
             arcCenter: CGPoint(x: frame.size.width/2.0, y: frame.size.height/2.0),
             radius: 132.0,
             startAngle: startAngle,
             endAngle: progressLayerEndAngle,
             clockwise: true)
-        
+
         self.progressLayer = self.circlePath (
             path: progressLayerCircularPath.cgPath,
             fillColor: UIColor.clear.cgColor,
@@ -65,7 +67,7 @@ class CircularProgressBarView: UIView {
             strokeEnd: 0,
             strokeColor: UIColor.cyan.cgColor
         )
-        
+
         layer.addSublayer(progressLayer)
     }
     

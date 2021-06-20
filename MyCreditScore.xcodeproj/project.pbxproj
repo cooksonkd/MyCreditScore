@@ -20,6 +20,8 @@
 		CE984CF22677767D003F585B /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE984CF12677767D003F585B /* CircularProgressBarView.swift */; };
 		CEFCA642267F582B009794D3 /* MyCreditScoreSlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCA641267F582B009794D3 /* MyCreditScoreSlowTests.swift */; };
 		CEFCA650267F8C20009794D3 /* MyCreditScoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCA64F267F8C20009794D3 /* MyCreditScoreTests.swift */; };
+		CEFCA659267FC556009794D3 /* CreditReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCA657267FC556009794D3 /* CreditReportViewController.swift */; };
+		CEFCA65A267FC556009794D3 /* CreditReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEFCA658267FC556009794D3 /* CreditReportViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		CEFCA64D267F8C20009794D3 /* MyCreditScoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCreditScoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFCA64F267F8C20009794D3 /* MyCreditScoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCreditScoreTests.swift; sourceTree = "<group>"; };
 		CEFCA651267F8C20009794D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEFCA657267FC556009794D3 /* CreditReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditReportViewController.swift; sourceTree = "<group>"; };
+		CEFCA658267FC556009794D3 /* CreditReportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditReportViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				CE2F617D2677AD6400FEF283 /* DashboardViewController.swift */,
+				CEFCA657267FC556009794D3 /* CreditReportViewController.swift */,
+				CEFCA658267FC556009794D3 /* CreditReportViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -279,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE984CEA2677650F003F585B /* LaunchScreen.storyboard in Resources */,
+				CEFCA65A267FC556009794D3 /* CreditReportViewController.xib in Resources */,
 				CE984CE72677650F003F585B /* Assets.xcassets in Resources */,
 				CE984CE526776507003F585B /* Main.storyboard in Resources */,
 			);
@@ -308,6 +315,7 @@
 				CE2F6184267A126500FEF283 /* CreditReportInfo.swift in Sources */,
 				CE984CDE26776507003F585B /* AppDelegate.swift in Sources */,
 				CE2F617F2677AD6400FEF283 /* DashboardViewController.swift in Sources */,
+				CEFCA659267FC556009794D3 /* CreditReportViewController.swift in Sources */,
 				CE984CF22677767D003F585B /* CircularProgressBarView.swift in Sources */,
 				CE2F6186267A243700FEF283 /* ApiResponse.swift in Sources */,
 				CE2F6182267A00DE00FEF283 /* NetworkRequest.swift in Sources */,

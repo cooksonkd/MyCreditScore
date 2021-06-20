@@ -10,6 +10,11 @@ import UIKit
 class DashboardViewController: UIViewController, DataManagerDelegate {
 
     @IBOutlet weak var incrementingCreditScoreLabel: UILabel!
+    @IBOutlet weak var tapGestureUIView: UIView! {
+        didSet{
+            tapGestureUIView.layer.cornerRadius = 140
+        }
+    }
     
     // MARK: - Text animation properties -
     var startValue: Double = 0
@@ -27,7 +32,9 @@ class DashboardViewController: UIViewController, DataManagerDelegate {
     
     override func viewDidLoad() {
         DataManager.shared.delegate = self
-        self.creditScorePercentage = CGFloat(endValue)/CGFloat(maxCreditScore)
+        if let creditScorePercentage = self.creditReportInfo?.creditScorePercentage() {
+            self.creditScorePercentage = creditScorePercentage
+        }
         super.viewDidLoad()
         setUpCircularProgressBarView()
     }
@@ -40,6 +47,7 @@ class DashboardViewController: UIViewController, DataManagerDelegate {
         }
         circularProgressBarView.center = view.center
         view.addSubview(circularProgressBarView)
+        circularProgressBarView.createProgressBarCircularPath(creditScorePercentage: self.creditScorePercentage)
         circularProgressBarView.progressAnimation(duration: animationDuration)
     }
     
@@ -64,6 +72,9 @@ class DashboardViewController: UIViewController, DataManagerDelegate {
         }
     }
     
+    @objc func handleTap() {
+        print("Did tap on circle!")
+    }
     
     // MARK: Delegate Method
     func updateViewController(creditReportInfo: CreditReportInfo?) {
@@ -80,6 +91,8 @@ class DashboardViewController: UIViewController, DataManagerDelegate {
             viewDidLoad()
             displayLink = CADisplayLink(target: self, selector: #selector(handleTextUpdate))
             displayLink?.add(to: .main, forMode: .default)
+            let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+            tapGestureUIView.addGestureRecognizer(tap)
         }
     }
 }

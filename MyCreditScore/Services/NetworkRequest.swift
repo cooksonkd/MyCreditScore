@@ -16,11 +16,9 @@ class NetworkRequest {
     class func fetchRequest(url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let data = data {
-                completionHandler(data, nil, nil)
-            } else if let response = response {
-                completionHandler(nil, response, nil)
+                completionHandler(data, response, nil)
             } else if let error = error {
-                completionHandler(nil, nil, error)
+                completionHandler(nil, response, error)
             }
         }
         task.resume()

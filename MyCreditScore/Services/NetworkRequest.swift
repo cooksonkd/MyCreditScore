@@ -13,12 +13,14 @@ class NetworkRequest {
     /// - Parameters:
     ///   - url: URL of API.
     ///   - completionHandler: A closure that handles the result of the network request.
-    class func fetchRequest(url: URL, completionHandler: @escaping (Data?, Error?) -> Void) {
+    class func fetchRequest(url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let data = data {
-                completionHandler(data, nil)
-            } else {
-                completionHandler(nil, error)
+                completionHandler(data, nil, nil)
+            } else if let response = response {
+                completionHandler(nil, response, nil)
+            } else if let error = error {
+                completionHandler(nil, nil, error)
             }
         }
         task.resume()

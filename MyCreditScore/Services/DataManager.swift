@@ -18,7 +18,7 @@ class DataManager {
     var delegate: DataManagerDelegate?
     
     private init() {
-        fetchCreditReportFromApi { [weak self] creditReportInfo in
+        fetchCreditReportFromApi { [weak self] creditReportInfo, error in
             if let strongSelf = self {
                 if let creditReportInfo = creditReportInfo {
                     DispatchQueue.main.async {
@@ -32,12 +32,14 @@ class DataManager {
     /// This method sends a request off to the api.
     /// - Parameter requestCompletion: A function that has a parameter of type CreditReportInfo?
     /// - Returns: Void
-    private func fetchCreditReportFromApi(requestCompletion: @escaping (CreditReportInfo?)->()) {
+    private func fetchCreditReportFromApi(requestCompletion: @escaping (CreditReportInfo?, Error?)->()) {
         if let url = URL(string: urlString) {
-            NetworkRequest.fetchRequest(url: url) { [weak self] data, error in
+            NetworkRequest.fetchRequest(url: url) { [weak self] data, resonse, error in
                 if let strongSelf = self {
                     if let data = data {
-                        requestCompletion(strongSelf.decodeJSONFromAPI(data: data, error: nil))
+                        requestCompletion(strongSelf.decodeJSONFromAPI(data: data, error: nil), nil)
+                    } else if let error = error {
+                        requestCompletion(nil, error)
                     }
                 }
             }

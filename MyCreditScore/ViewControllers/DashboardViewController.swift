@@ -17,6 +17,7 @@ class DashboardViewController: UIViewController, DataManagerDelegate {
     var maxCreditScore: Double = 100
     let animationDuration: Double = 2
     var animationStartDate: Date?
+    var creditReportInfo: CreditReportInfo?
     
     // MARK: - Progress bar properties -
     var circularProgressBarView: CircularProgressBarView!
@@ -29,11 +30,14 @@ class DashboardViewController: UIViewController, DataManagerDelegate {
         self.creditScorePercentage = CGFloat(endValue)/CGFloat(maxCreditScore)
         super.viewDidLoad()
         setUpCircularProgressBarView()
-        
     }
     
     func setUpCircularProgressBarView() {
-        circularProgressBarView = CircularProgressBarView(frame: .zero, creditScorePercentage: creditScorePercentage)
+        if let creditScorePercentage = self.creditReportInfo?.creditScorePercentage() {
+            circularProgressBarView = CircularProgressBarView(frame: .zero, creditScorePercentage: creditScorePercentage)
+        } else {
+            circularProgressBarView = CircularProgressBarView(frame: .zero, creditScorePercentage: 0.0)
+        }
         circularProgressBarView.center = view.center
         view.addSubview(circularProgressBarView)
         circularProgressBarView.progressAnimation(duration: animationDuration)
@@ -64,10 +68,15 @@ class DashboardViewController: UIViewController, DataManagerDelegate {
     // MARK: Delegate Method
     func updateViewController(creditReportInfo: CreditReportInfo?) {
         self.animationStartDate = Date ()
-        if let endValue = creditReportInfo?.score,
-           let maxCreditScore = creditReportInfo?.maxScoreValue {
-            self.endValue = Double(endValue)
-            self.maxCreditScore = Double(maxCreditScore)
+        if let creditReportInfo = creditReportInfo {
+            self.creditReportInfo = creditReportInfo
+            if let startValue = creditReportInfo.minScoreValue,
+               let endValue = creditReportInfo.score,
+               let maxCreditScore = creditReportInfo.maxScoreValue {
+                self.startValue = Double(startValue)
+                self.endValue = Double(endValue)
+                self.maxCreditScore = Double(maxCreditScore)
+            }
             viewDidLoad()
             displayLink = CADisplayLink(target: self, selector: #selector(handleTextUpdate))
             displayLink?.add(to: .main, forMode: .default)

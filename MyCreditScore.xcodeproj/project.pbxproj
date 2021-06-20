@@ -19,7 +19,26 @@
 		CE984CE72677650F003F585B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE984CE62677650F003F585B /* Assets.xcassets */; };
 		CE984CEA2677650F003F585B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE984CE82677650F003F585B /* LaunchScreen.storyboard */; };
 		CE984CF22677767D003F585B /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE984CF12677767D003F585B /* CircularProgressBarView.swift */; };
+		CEFCA60C267F189F009794D3 /* MyCreditScoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCA60B267F189F009794D3 /* MyCreditScoreTests.swift */; };
+		CEFCA61A267F26ED009794D3 /* MyCreditScoreSlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCA619267F26ED009794D3 /* MyCreditScoreSlowTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEFCA60E267F189F009794D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE984CD226776507003F585B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE984CD926776507003F585B;
+			remoteInfo = MyCreditScore;
+		};
+		CEFCA61C267F26ED009794D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE984CD226776507003F585B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE984CD926776507003F585B;
+			remoteInfo = MyCreditScore;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CE2F617D2677AD6400FEF283 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -36,10 +55,30 @@
 		CE984CE92677650F003F585B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE984CEB2677650F003F585B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE984CF12677767D003F585B /* CircularProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBarView.swift; sourceTree = "<group>"; };
+		CEFCA609267F189F009794D3 /* MyCreditScoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCreditScoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEFCA60B267F189F009794D3 /* MyCreditScoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCreditScoreTests.swift; sourceTree = "<group>"; };
+		CEFCA60D267F189F009794D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEFCA617267F26ED009794D3 /* MyCreditScoreSlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCreditScoreSlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEFCA619267F26ED009794D3 /* MyCreditScoreSlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCreditScoreSlowTests.swift; sourceTree = "<group>"; };
+		CEFCA61B267F26ED009794D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CE984CD726776507003F585B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEFCA606267F189F009794D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEFCA614267F26ED009794D3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -88,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				CE984CDC26776507003F585B /* MyCreditScore */,
+				CEFCA60A267F189F009794D3 /* MyCreditScoreTests */,
+				CEFCA618267F26ED009794D3 /* MyCreditScoreSlowTests */,
 				CE984CDB26776507003F585B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,6 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				CE984CDA26776507003F585B /* MyCreditScore.app */,
+				CEFCA609267F189F009794D3 /* MyCreditScoreTests.xctest */,
+				CEFCA617267F26ED009794D3 /* MyCreditScoreSlowTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,6 +158,24 @@
 				CE984CEB2677650F003F585B /* Info.plist */,
 			);
 			path = MyCreditScore;
+			sourceTree = "<group>";
+		};
+		CEFCA60A267F189F009794D3 /* MyCreditScoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				CEFCA60B267F189F009794D3 /* MyCreditScoreTests.swift */,
+				CEFCA60D267F189F009794D3 /* Info.plist */,
+			);
+			path = MyCreditScoreTests;
+			sourceTree = "<group>";
+		};
+		CEFCA618267F26ED009794D3 /* MyCreditScoreSlowTests */ = {
+			isa = PBXGroup;
+			children = (
+				CEFCA619267F26ED009794D3 /* MyCreditScoreSlowTests.swift */,
+				CEFCA61B267F26ED009794D3 /* Info.plist */,
+			);
+			path = MyCreditScoreSlowTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +198,42 @@
 			productReference = CE984CDA26776507003F585B /* MyCreditScore.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CEFCA608267F189F009794D3 /* MyCreditScoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEFCA612267F189F009794D3 /* Build configuration list for PBXNativeTarget "MyCreditScoreTests" */;
+			buildPhases = (
+				CEFCA605267F189F009794D3 /* Sources */,
+				CEFCA606267F189F009794D3 /* Frameworks */,
+				CEFCA607267F189F009794D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEFCA60F267F189F009794D3 /* PBXTargetDependency */,
+			);
+			name = MyCreditScoreTests;
+			productName = MyCreditScoreTests;
+			productReference = CEFCA609267F189F009794D3 /* MyCreditScoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CEFCA616267F26ED009794D3 /* MyCreditScoreSlowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEFCA61E267F26ED009794D3 /* Build configuration list for PBXNativeTarget "MyCreditScoreSlowTests" */;
+			buildPhases = (
+				CEFCA613267F26ED009794D3 /* Sources */,
+				CEFCA614267F26ED009794D3 /* Frameworks */,
+				CEFCA615267F26ED009794D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEFCA61D267F26ED009794D3 /* PBXTargetDependency */,
+			);
+			name = MyCreditScoreSlowTests;
+			productName = MyCreditScoreSlowTests;
+			productReference = CEFCA617267F26ED009794D3 /* MyCreditScoreSlowTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -148,6 +245,14 @@
 				TargetAttributes = {
 					CE984CD926776507003F585B = {
 						CreatedOnToolsVersion = 12.5;
+					};
+					CEFCA608267F189F009794D3 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = CE984CD926776507003F585B;
+					};
+					CEFCA616267F26ED009794D3 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = CE984CD926776507003F585B;
 					};
 				};
 			};
@@ -165,6 +270,8 @@
 			projectRoot = "";
 			targets = (
 				CE984CD926776507003F585B /* MyCreditScore */,
+				CEFCA608267F189F009794D3 /* MyCreditScoreTests */,
+				CEFCA616267F26ED009794D3 /* MyCreditScoreSlowTests */,
 			);
 		};
 /* End PBXProject section */
@@ -177,6 +284,20 @@
 				CE984CEA2677650F003F585B /* LaunchScreen.storyboard in Resources */,
 				CE984CE72677650F003F585B /* Assets.xcassets in Resources */,
 				CE984CE526776507003F585B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEFCA607267F189F009794D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEFCA615267F26ED009794D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,7 +320,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CEFCA605267F189F009794D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEFCA60C267F189F009794D3 /* MyCreditScoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEFCA613267F26ED009794D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEFCA61A267F26ED009794D3 /* MyCreditScoreSlowTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEFCA60F267F189F009794D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE984CD926776507003F585B /* MyCreditScore */;
+			targetProxy = CEFCA60E267F189F009794D3 /* PBXContainerItemProxy */;
+		};
+		CEFCA61D267F26ED009794D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE984CD926776507003F585B /* MyCreditScore */;
+			targetProxy = CEFCA61C267F26ED009794D3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CE984CE326776507003F585B /* Main.storyboard */ = {
@@ -375,6 +525,86 @@
 			};
 			name = Release;
 		};
+		CEFCA610267F189F009794D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77QDD2BL7Y;
+				INFOPLIST_FILE = MyCreditScoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = keenancookson.MyCreditScoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyCreditScore.app/MyCreditScore";
+			};
+			name = Debug;
+		};
+		CEFCA611267F189F009794D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77QDD2BL7Y;
+				INFOPLIST_FILE = MyCreditScoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = keenancookson.MyCreditScoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyCreditScore.app/MyCreditScore";
+			};
+			name = Release;
+		};
+		CEFCA61F267F26ED009794D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77QDD2BL7Y;
+				INFOPLIST_FILE = MyCreditScoreSlowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = keenancookson.MyCreditScoreSlowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyCreditScore.app/MyCreditScore";
+			};
+			name = Debug;
+		};
+		CEFCA620267F26ED009794D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77QDD2BL7Y;
+				INFOPLIST_FILE = MyCreditScoreSlowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = keenancookson.MyCreditScoreSlowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyCreditScore.app/MyCreditScore";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -392,6 +622,24 @@
 			buildConfigurations = (
 				CE984CEF2677650F003F585B /* Debug */,
 				CE984CF02677650F003F585B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEFCA612267F189F009794D3 /* Build configuration list for PBXNativeTarget "MyCreditScoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEFCA610267F189F009794D3 /* Debug */,
+				CEFCA611267F189F009794D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEFCA61E267F26ED009794D3 /* Build configuration list for PBXNativeTarget "MyCreditScoreSlowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEFCA61F267F26ED009794D3 /* Debug */,
+				CEFCA620267F26ED009794D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
